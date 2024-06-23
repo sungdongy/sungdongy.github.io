@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="top-section">
-            <div class="profile-pic"></div>
-            {% include header.html %}
+    <header class="site-header">
+        <div class="container">
+            <div class="profile-section">
+                <div class="profile-pic"></div>
+                <h1 class="site-title">{{ site.title }}</h1>
+            </div>
+            {% include navigation.html %}
         </div>
-        <div class="main-content">
-            <main>
-                {{ content }}
-            </main>
+    </header>
+    <main class="site-content">
+        <div class="container">
+            {{ content }}
         </div>
-        <footer>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
             <p>Version 1.0 | Last updated: {{ site.time | date: "%Y-%m-%d" }}</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
