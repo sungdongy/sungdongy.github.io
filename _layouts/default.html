@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
+        <div class="top-section">
             <div class="profile-pic"></div>
+            {% include header.html %}
         </div>
         <div class="main-content">
-            {% include header.html %}
             <main>
                 {{ content }}
             </main>
