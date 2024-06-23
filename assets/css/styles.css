@@ -89,3 +89,14 @@ nav ul ul li a:hover {
     flex: 1;
     padding: 20px;
 }
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #999;
+    font-size: 0.8em;
+}
+
+footer p {
+    margin: 0;
+}
