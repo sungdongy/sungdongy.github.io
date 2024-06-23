@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="profile-section">
-                <div class="profile-pic"></div>
-                <h1 class="site-title">{{ site.title }}</h1>
-            </div>
-            {% include navigation.html %}
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-pic"></div>
         </div>
-    </header>
-    <main class="site-content">
-        <div class="container">
-            <h2>{{ page.title }}</h2>
-            {{ content }}
+        <div class="main-content">
+            {% include header.html %}
+            <main>
+                {{ content }}
+            </main>
         </div>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <p>Version 1.0 | Last updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</p>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
